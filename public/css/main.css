@@ -1,0 +1,11 @@
+.sym-btn-1 {
+    margin-left: 40%;
+}
+
+.sym-btn-2 {
+    margin-left: 35%;
+}
+
+#deleteTenant {
+    cursor: pointer;
+}

@@ -1,0 +1,49 @@
+<%- include ('partials/header') %>
+
+    <header>
+        <div class="container-fluid bg-dark">
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <h1 class="text-uppercase text-white text-center">
+                        <a href="/" class="nav-link text-white">
+                            <i class="fa fa-home"></i>&nbsp;&nbsp; simple hostel
+                        </a>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="m-5 d-flex justify-content-center">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <h4 class="text-dark text-uppercase text-center">
+                    <i class="fa fa-house-user"></i> add new tenant</h4>
+            </div>
+            <div class="col-xs-12 col-md-12">
+                <form action="/add" method="POST" class="form-group">
+                    <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First Name" required><br>
+                    <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Last Name" required><br>
+                    <input type="number" name="room_no" class="form-control" id="room_no" placeholder="Room Number" required><br>
+                    <input type="text" name="tenancy" class="form-control" id="tenancy" placeholder="Tenancy Period" required><br>
+                    <input type="text" name="occupation" class="form-control" id="occupation" placeholder="Occupation" required><br>
+                    <select name="gender" id="gender" class="form-control" required>
+                        <option value="Male" class="form-control">Male</option>
+                        <option value="Female" class="form-control">Female</option>
+                    </select> <br>
+                    <input type="number" name="phone_no" class=" form-control" id="phone_no" placeholder="Phone Number" required><br>
+                    <button class="btn btn-outline-success sym-btn-1" type="submit">Add Tenant</button><br>
+                    <br>
+                    <a href="/view" class=" btn btn-outline-primary sym-btn-2">View sitting Tenants</a>                   
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <!--
+        ============================
+            Load Javascript
+        ============================
+    -->
+
+<%- include ('partials/footer') %>

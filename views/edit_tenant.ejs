@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+        ============================
+            Load CSS style sheet
+        ============================
+    -->
+    <link rel="stylesheet" type = "text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type = "text/css" href="../css/fontawesome.css">
+    <link rel="stylesheet" type = "text/css" href="../css/all.css">
+    <link rel="stylesheet" type = "text/css" href="../css/main.css">
+    <title>Simple Hostel || <%= title %> </title>
+</head>
+<body>
+
+    <header>
+        <div class="container-fluid bg-dark">
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <h1 class="text-uppercase text-white text-center">
+                        <a href="/" class="nav-link text-white">
+                            <i class="fa fa-home"></i>&nbsp;&nbsp; simple hostel
+                        </a>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="m-5 d-flex justify-content-center">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <h4 class="text-dark text-uppercase text-center">
+                    <i class="fa fa-user-edit"></i> edit tenant</h4>
+            </div>
+            <div class="col-xs-12 col-md-12">
+                <form action="/edit/<%= tenant._id %>" method="POST" class="form-group">
+
+                    <span class=" text-dark font-weight-bold">First Name</span>
+                    <input type="text" name="first_name" class="form-control" id="first_name" placeholder="First Name" value="<%= tenant.first_name %>" required>
+                    <br>
+                    <span class=" text-dark font-weight-bold">Last Name</span>
+                    <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Last Name" value="<%= tenant.last_name %>" required>
+                    <br>
+                    <span class=" text-dark font-weight-bold">Room No</span>
+                    <input type="number" name="room_no" class="form-control" id="room_no" placeholder="Room Number" value="<%= tenant.room_no %>" required>
+                    <br>
+                    <span class=" text-dark font-weight-bold">Tenancy Period</span>
+                    <input type="text" name="tenancy" class="form-control" id="tenancy" placeholder="Tenancy Period" value="<%= tenant.tenancy %>" required>
+                    <br>
+                    <span class=" text-dark font-weight-bold">Occupation</span>
+                    <input type="text" name="occupation" class="form-control" id="occupation" placeholder="Occupation" value="<%= tenant.occupation %>" required>
+                    <br>
+                    <span class=" text-dark font-weight-bold">Gender</span>
+                    <select name="gender" id="gender" class="form-control" required>
+                        <option value="Male" class="form-control">Male</option>
+                        <option value="Female" class="form-control">Female</option>
+                    </select>
+                    <br>
+                    <span class=" text-dark font-weight-bold">Phone No</span>
+                    <input type="number" name="phone_no" class=" form-control" id="phone_no" placeholder="Phone Number" value="<%= tenant.phone_no %>" required>
+                    <br>
+                    <button class="btn btn-outline-primary sym-btn-1" type="submit">Update Tenant</button><br>      
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <!--
+        ============================
+            Load Javascript
+        ============================
+    -->
+
+    <script type="text/javascript" src="../js/jquery-3.5.1.min.js" ></script>
+    <script type="text/javascript" src="../js/bootstrap.js" ></script>
+    <script type="text/javascript" src="../js/main.js" ></script>
+    </body>
+</html>
